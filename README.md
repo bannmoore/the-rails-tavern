@@ -35,6 +35,13 @@ Create a controller:
 
 ```sh
 bin/rails generate controller Welcome index
+bin/rails generate controller Characters
+```
+
+View routes:
+
+```sh
+bin/rails routes
 ```
 
 ## Troubleshooting
