@@ -31,6 +31,12 @@ Start the server:
 bin/rails server
 ```
 
+Create a controller:
+
+```sh
+bin/rails generate controller Welcome index
+```
+
 ## Troubleshooting
 
 ["can't activate sqlite"](https://stackoverflow.com/questions/54527277/cant-activate-sqlite3-1-3-6-already-activated-sqlite3-1-4-0)
