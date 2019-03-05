@@ -44,6 +44,18 @@ View routes:
 bin/rails routes
 ```
 
+Create a model:
+
+```sh
+bin/rails generate model Character name:string character_class:string
+```
+
+Run db migrations:
+
+```sh
+bin/rails db:migrate
+```
+
 ## Troubleshooting
 
 ["can't activate sqlite"](https://stackoverflow.com/questions/54527277/cant-activate-sqlite3-1-3-6-already-activated-sqlite3-1-4-0)
