@@ -39,6 +39,12 @@ bin/rails generate controller Characters
 bin/rails generate controller Sheets
 ```
 
+Create a controller (with scaffolding):
+
+```sh
+bin/tails generate scaffold_controller character name:string character_class:string
+```
+
 View routes:
 
 ```sh
@@ -58,7 +64,41 @@ Run db migrations:
 bin/rails db:migrate
 ```
 
-Tutorial Progress: https://guides.rubyonrails.org/getting_started.html#adding-a-second-model
+Run tests:
+
+```sh
+bin/rails test [file]
+```
+
+Generate unit test:
+
+```sh
+bin/rails generate test_unit:model character name:string character_class:string
+```
+
+Generate system test:
+
+```sh
+bin/rails generate system_test characters
+```
+
+Generate integration test:
+
+```sh
+bin/rails generate integration_test character_flow
+```
+
+Generate test scaffold code for an existing controller:
+
+```sh
+bin/rails generate test_unit:scaffold character
+```
+
+View test logs:
+
+```sh
+tail -f log/test.log
+```
 
 ## Troubleshooting
 
