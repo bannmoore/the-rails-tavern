@@ -36,6 +36,7 @@ Create a controller:
 ```sh
 bin/rails generate controller Welcome index
 bin/rails generate controller Characters
+bin/rails generate controller Sheets
 ```
 
 View routes:
@@ -48,6 +49,7 @@ Create a model:
 
 ```sh
 bin/rails generate model Character name:string character_class:string
+bin/rails generate model Sheet level:integer character:references
 ```
 
 Run db migrations:
@@ -55,6 +57,8 @@ Run db migrations:
 ```sh
 bin/rails db:migrate
 ```
+
+Tutorial Progress: https://guides.rubyonrails.org/getting_started.html#adding-a-second-model
 
 ## Troubleshooting
 

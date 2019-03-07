@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_155710) do
+ActiveRecord::Schema.define(version: 2019_03_07_145909) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "character_class"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sheets", force: :cascade do |t|
+    t.integer "level"
+    t.integer "character_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_sheets_on_character_id"
   end
 
 end
