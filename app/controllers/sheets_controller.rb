@@ -5,7 +5,14 @@ class SheetsController < ApplicationController
     redirect_to character_path(@character)
   end
 
-  private 
+  def destroy
+    @character = Character.find(params[:character_id])
+    @sheet = @character.sheets.find(params[:id])
+    @sheet.destroy
+    redirect_to character_path(@character)
+  end
+
+  private
 
   def sheet_params
     params.require(:sheet).permit(:level)

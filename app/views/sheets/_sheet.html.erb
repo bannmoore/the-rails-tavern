@@ -2,3 +2,9 @@
   <strong>Level:</strong>
   <%= sheet.level %>
 </p>
+
+<p>
+  <%= link_to 'Destroy Sheet', [sheet.character, sheet],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>
