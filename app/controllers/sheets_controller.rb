@@ -1,4 +1,6 @@
 class SheetsController < ApplicationController
+  http_basic_authenticate_with name: 'bannmoore', password: 'secret', only: :destroy
+
   def create
     @character = Character.find(params[:character_id])
     @sheet = @character.sheets.create(sheet_params)

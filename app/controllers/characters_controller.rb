@@ -1,4 +1,6 @@
 class CharactersController < ApplicationController
+  http_basic_authenticate_with name: 'bannmoore', password: 'secret', except: [:index, :show]
+
   def index
     @characters = Character.all
   end
