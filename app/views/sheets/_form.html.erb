@@ -1,0 +1,9 @@
+<%= form_with(model: [ @character, @character.sheets.build ], local:true) do |form| %>
+<p>
+  <%= form.label :level %><br>
+  <%= form.text_field :level %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>

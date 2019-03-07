@@ -9,23 +9,10 @@
 </p>
 
 <h2>Character Sheets</h2>
-<% @character.sheets.each do |sheet| %>
-<p>
-  <strong>Level:</strong>
-  <%= sheet.level %>
-</p>
-<% end %>
+<%= render @character.sheets %>
 
 <h2>Add a character sheet:</h2>
-<%= form_with(model: [ @character, @character.sheets.build ], local:true) do |form| %>
-<p>
-  <%= form.label :level %><br>
-  <%= form.text_field :level %>
-</p>
-<p>
-  <%= form.submit %>
-</p>
-<% end %>
+<%= render 'sheets/form' %>
 
 <%= link_to 'Edit', edit_character_path(@character) %>
 <%= link_to 'Back', characters_path %>
