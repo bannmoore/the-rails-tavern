@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% sheets.each do |sheet| %>
+    <tr>
+      <td><%= sheet.level %></td>
+      <td><%= link_to 'Show', [sheet.character, sheet] %></td>
+      <td><%= link_to 'Edit', edit_character_sheet_path(sheet) %></td>
+      <td><%= link_to 'Destroy', [sheet.character, sheet], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

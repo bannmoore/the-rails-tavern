@@ -1,0 +1,9 @@
+<h1>Character Sheet</h1>
+
+<h2><%= @character.name %></h2>
+<p>
+  Level: <%= @sheet.level %>
+</p>
+
+<%= link_to 'Back', character_path(@character) %>
+<%= link_to 'Edit', edit_character_sheet_path(@sheet) %>
